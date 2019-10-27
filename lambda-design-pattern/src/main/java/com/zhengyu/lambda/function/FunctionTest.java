@@ -13,7 +13,7 @@ public class FunctionTest {
 
         Preconditions.checkArgument(
                 "HELLOWORLD10".equals(
-                        appendFunc().andThen(lenthAppendFunc()).andThen(toUpperCaseFunc())
+                        appendFunc().andThen(lengthAppendFunc()).andThen(toUpperCaseFunc())
                                 .apply("hello")
                 ), "function is running bad");
 
@@ -23,7 +23,7 @@ public class FunctionTest {
         return s -> s + "world";
     }
 
-    private static Function<String, String> lenthAppendFunc() {
+    private static Function<String, String> lengthAppendFunc() {
         return s -> s + s.length();
     }
 
